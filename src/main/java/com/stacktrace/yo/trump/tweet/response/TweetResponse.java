@@ -1,4 +1,4 @@
-package org.stacktrace.yo.trump.tweet.response;
+package com.stacktrace.yo.trump.tweet.response;
 
 /**
  * Created by afarag on 7/19/2017.

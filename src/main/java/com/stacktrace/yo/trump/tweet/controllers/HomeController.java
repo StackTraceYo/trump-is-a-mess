@@ -1,4 +1,4 @@
-package org.stacktrace.yo.trump.tweet.controllers;
+package com.stacktrace.yo.trump.tweet.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

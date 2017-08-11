@@ -1,4 +1,4 @@
-package org.stacktrace.yo.trump.tweet;
+package com.stacktrace.yo.trump.tweet;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
