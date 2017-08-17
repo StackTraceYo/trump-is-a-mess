@@ -3,43 +3,103 @@
 
 html,
 body {
-    background-color: white;
+    background-color: #fff;
     font: normal normal normal 18px/1.2 "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
-    color: #292f33;
-    padding-top: 20px;
+    color: #000;
+    padding: 0;
     margin: 0;
 }
 
 .container {
-    max-width: 900px;
+    max-width: 640px;
     margin: 0 auto;
     text-align: center;
 }
 
-#main {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 0 20px 20px 20px;
+.tweet-button {
+    border: 1px solid #1B95E0;
+    color: #1B95E0;
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-weight: bold;
 }
 
-#box {
-    max-width: 600px;
-    margin: 0 auto;
-}
-#radio {
-    max-width: 600px;
-    margin: 0 auto;
+.tweet-button:focus {
+    outline: none;
 }
 
-h1 {
-    color: #7e57c2;
-    margin: 0;
+.tweet-container {
+    border: 1px solid #e6ecf0;
+    padding: 30px 40px;
 }
 
-a {
-    color: #7e57c2;
+.tweet-header {
+    min-height: 70px;
 }
 
-#fileText{
-    float : right;
+.tweet-header:after {
+    content: '';
+    clear: both;
+}
+
+.tweet-avatar img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.tweet-avatar {
+    margin-left: 5px;
+}
+
+.tweet-avatar, .tweet-account-container {
+    float: left;
+}
+
+.tweet-name {
+    font-size: 18px;
+    margin: 5px;
+}
+
+.tweet-name a {
+    text-decoration: none;
+    color: #000;
+}
+
+.tweet-name a:hover {
+    text-decoration: underline;
+    color: #1B95E0;
+}
+
+.tweet-username {
+    font-size: 14px;
+    font-weight: normal;
+    color: #657786;
+    margin: 5px;
+    text-align: left;
+}
+
+.tweet-follow-button {
+    float: right;
+}
+
+.tweet-text {
+    font-size: 27px;
+    line-height: 32px;
+    letter-spacing: 0.01em;
+    word-wrap: break-word;
+    text-align: left;
+    margin: 5px;
+}
+
+.tweet-timestamp {
+    color: #657786;
+}
+
+.tweet-generate-button {
+    margin: 10px auto;
+    display: block;
 }

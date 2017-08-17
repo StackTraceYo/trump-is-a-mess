@@ -2,10 +2,6 @@
 
 import React, {Component} from "react";
 import injectTapEventPlugin from "react-tap-event-plugin";
-import RaisedButton from "material-ui/RaisedButton";
-import getMuiTheme from "material-ui/styles/getMuiTheme";
-import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-import {deepPurple400, tealA700} from "material-ui/styles/colors";
 
 const client = require('./client.jsx');
 const ReactDOM = require('react-dom');
@@ -40,44 +36,36 @@ class App extends Component {
             });
     }
 
-    createTweet() {
-
-        return <div>
-            <br/>
-            Tweet: {this.state.tweet}:
-            <br/>
-        </div>;
-    }
-
 
     render() {
         const self = this;
         return <div>
             <div className="container">
-                <div id="main">
-                    <h1>Trump Tweet Generator</h1>
+                <h1 className="tweet-title">Trump Tweet Generator</h1>
+                <div className="tweet-container">
+                    <div className="tweet-header">
+                        <div className="tweet-profile">
+                            <div className="tweet-avatar">
+                                <img src="https://pbs.twimg.com/profile_images/874276197357596672/kUuht00m_bigger.jpg"/>
+                            </div>
+                            <div className="tweet-account-container">
+                                <h4 className="tweet-name"><a href="#">Donald J. Trump</a></h4>
+                                <h6 className="tweet-username">@realDonaldTrump</h6>
+                            </div>
+                            <div className="tweet-follow-button">
+                                <button className="tweet-button">Follow</button>
+                            </div>
+                        </div>
+                    </div>
+                    <p className="tweet-text">
+                        {this.state.tweet}
+                    </p>
+                    <div className="tweet-timestamp">3:46 PM - 17 Aug 2017</div>
                 </div>
             </div>
-            <MuiThemeProvider muiTheme={getMuiTheme(
-                {
-                    palette: {
-                        primary1Color: deepPurple400,
-                        secondary1Color: tealA700,
-                    }
-                }
-            )}>
-                <div id="box">
-                    <div>
-                        {this.createTweet()}
-                    </div>
-                    <div>
-                        <br/>
-                        <RaisedButton label="Generate" primary={true} fullWidth={false} containerElement='label'
-                                      onClick={this.generate}>
-                        </RaisedButton>
-                    </div>
-                </div>
-            </MuiThemeProvider>
+            <div>
+                <button className="tweet-generate-button tweet-button" onClick={this.generate}>Generate</button>
+            </div>
         </div>
     }
 }
