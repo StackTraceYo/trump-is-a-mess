@@ -10,10 +10,75 @@ body {
     margin: 0;
 }
 
+@font-face {
+    font-family: edgeicons;
+    src: url(edge-icons-Regular.woff);
+}
+
+.unstyled-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.edge-icon:after {
+    font-family: "edgeicons";
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    display: block;
+    width: 18px;
+    height: 18px;
+}
+
+.edge-icon-verified:after {
+    content: "\f099";
+}
+
+.edge-icon-reply:after {
+    content: "\f151";
+}
+
+.edge-icon-retweet:after {
+    content: "\f152";
+}
+
+.edge-icon-heart:after {
+    content: "\f148";
+}
+
 .container {
     max-width: 640px;
     margin: 0 auto;
     text-align: center;
+}
+
+.tweet-gray {
+    color: #657786;
+}
+
+.tweet-blue-link {
+    text-decoration: none;
+}
+
+.tweet-blue-link:hover {
+    color: #1B95E0;
+}
+
+.tweet-green-link {
+    text-decoration: none;
+}
+
+.tweet-green-link:hover {
+    color: #17bf63;
+}
+
+.tweet-red-link {
+    text-decoration: none;
+}
+
+.tweet-red-link:hover {
+    color: #e0245e;
 }
 
 .tweet-button {
@@ -65,13 +130,23 @@ body {
 }
 
 .tweet-name a {
-    text-decoration: none;
     color: #000;
 }
 
 .tweet-name a:hover {
     text-decoration: underline;
-    color: #1B95E0;
+}
+
+.tweet-name .edge-icon-verified:after {
+    width: 16px;
+    height: 16px;
+}
+
+.tweet-verified {
+    float: right;
+    padding-left: 3px;
+    color: #1da1f2;
+    font-size: 16px;
 }
 
 .tweet-username {
@@ -92,11 +167,91 @@ body {
     letter-spacing: 0.01em;
     word-wrap: break-word;
     text-align: left;
-    margin: 5px;
+    margin: 5px 0;
+    min-height: 200px;
 }
 
 .tweet-timestamp {
     color: #657786;
+    font-size: 14px;
+    text-align: left;
+    padding: 5px 0;
+}
+
+ul.tweet-stats {
+    border-top: 1px solid #e6ecf0;
+    border-bottom: 1px solid #e6ecf0;
+
+    padding: 10px 0;
+    height: 30px;
+
+    color: #657786;
+    font-size: 14px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+
+.tweet-stat {
+    margin: 0;
+    padding: 16px 0;
+}
+
+.tweet-stat a {
+    text-decoration: none;
+    color: #14171a;
+}
+
+.tweet-stat a:hover {
+    color:#1B95E0;
+}
+
+.tweet-stat strong {
+    color: #14171a;
+    padding-right: 5px;
+}
+
+.tweet-likes {
+    padding-left: 5px;
+    padding-right: 5px;
+    border-right: 1px solid #e6ecf0;
+}
+
+.tweet-stats .tweet-avatar img{
+    width: 24px;
+    height: 24px;
+}
+
+.tweet-avatar-row {
+    display: flex;
+}
+
+.tweet-action-list {
+    padding: 10px 0;
+    font-size: 12px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+
+.tweet-action-list .edge-icon {
+    float:left;
+}
+
+.tweet-action-list .edge-icon:after {
+    clear: both;
+}
+
+.tweet-action-list li span {
+    padding-left: 10px;
+}
+
+.tweet-retweet, .tweet-heart {
+    padding-left: 20px;
 }
 
 .tweet-generate-button {
